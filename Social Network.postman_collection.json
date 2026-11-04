@@ -1,0 +1,109 @@
+{
+  "info": {
+    "_postman_id": "94be064c-eceb-4af3-b92d-fc1eb5c1d207",
+    "name": "Social Network",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "503734",
+    "_collection_link": "https://go.postman.co/collection/503734-94be064c-eceb-4af3-b92d-fc1eb5c1d207?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "1. Register User",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"login\": \"Surkov\",\n  \"password\": \"SuperPassword\",\n  \"first_name\": \"Dm\",\n  \"last_name\": \"DS\",\n  \"birth_date\": \"1990-05-15T00:00:00Z\",\n  \"gender\": \"male\",\n  \"interests\": \"programming, music\",\n  \"city\": \"Moskow\"\n}",
+          "options": {
+            "raw": {
+              "language": "text"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/user/register",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "user",
+            "register"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "2. Login",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "var jsonData = pm.response.json();\npm.environment.set(\"token\", jsonData.token);"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"login\": \"Surkov\",\n  \"password\": \"SuperPassword\"\n}",
+          "options": {
+            "raw": {
+              "language": "text"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/login",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "3. Get User Profile",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "{{token}}"
+          }
+        ],
+        "url": {
+          "raw": "{{base_url}}/user/get/3",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "user",
+            "get",
+            "3"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
