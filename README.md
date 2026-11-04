@@ -157,3 +157,16 @@ docker-compose down
 ```bash
 docker-compose down -v
 ```
+
+
+## Дополнительные материалы
+
+В репозитории находятся файлы для тестирования API:
+- `Social Network.postman_collection.json`- Postman-коллекция с запросами для всех эндпоинтов
+- `SocialNetwork.postman_environment.json` — окружение с переменной `token`, опционально
+
+**Как использовать:**
+1. Откройть Postman
+2. Нажать **Import** и выберть файл `Social Network.postman_collection.json`
+3. Импортировать окружение `SocialNetwork.postman_environment.json`
+4. Выполнить запросы
