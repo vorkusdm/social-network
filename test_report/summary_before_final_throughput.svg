@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100%" height="100%" fill="#f8f9fa" rx="8"/>
+  <text x="400.0" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#2c3e50">Throughput (RPS) - summary_before_final.json</text>
+  <line x1="60" y1="340" x2="740" y2="340" stroke="#34495e" stroke-width="2"/>
+  <line x1="60" y1="60" x2="60" y2="340" stroke="#34495e" stroke-width="2"/>
+  <text x="20" y="200.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#34495e" transform="rotate(-90, 20, 200.0)">Запросов/сек</text><text x="50" y="345.0" text-anchor="end" font-family="Arial, sans-serif" font-size="12" fill="#7f8c8d">0</text><line x1="55" y1="340.0" x2="60" y2="340.0" stroke="#95a5a6" stroke-width="1"/><text x="50" y="275.0" text-anchor="end" font-family="Arial, sans-serif" font-size="12" fill="#7f8c8d">33</text><line x1="55" y1="270.0" x2="60" y2="270.0" stroke="#95a5a6" stroke-width="1"/><text x="50" y="205.0" text-anchor="end" font-family="Arial, sans-serif" font-size="12" fill="#7f8c8d">66</text><line x1="55" y1="200.0" x2="60" y2="200.0" stroke="#95a5a6" stroke-width="1"/><text x="50" y="135.0" text-anchor="end" font-family="Arial, sans-serif" font-size="12" fill="#7f8c8d">100</text><line x1="55" y1="130.0" x2="60" y2="130.0" stroke="#95a5a6" stroke-width="1"/><text x="50" y="65.0" text-anchor="end" font-family="Arial, sans-serif" font-size="12" fill="#7f8c8d">133</text><line x1="55" y1="60.0" x2="60" y2="60.0" stroke="#95a5a6" stroke-width="1"/>
+  <circle cx="60" cy="106.66666666666669" r="5" fill="#27ae60" stroke="#fff" stroke-width="2"/>
+  <text x="60" y="91.66666666666669" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#27ae60">110.7</text>
+  <text x="60" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#7f8c8d">RPS</text>
+</svg>

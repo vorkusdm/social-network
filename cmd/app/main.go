@@ -21,6 +21,7 @@ func main() {
 	mux.HandleFunc("POST /login", h.Login)
 	// GetUser ...  middleware
 	mux.HandleFunc("GET /user/get/{id}", h.AuthMiddleware(h.GetUser))
+	mux.HandleFunc("GET /user/search", h.SearchUsers)
 	fmt.Println("Server started on :8080")
 	log.Fatal(http.ListenAndServe(":8080", mux))
 }

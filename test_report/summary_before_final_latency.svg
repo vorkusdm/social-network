@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100%" height="100%" fill="#f8f9fa" rx="8"/>
+  <text x="400.0" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#2c3e50">Latency (время отклика) - summary_before_final.json</text>
+  <line x1="60" y1="340" x2="740" y2="340" stroke="#34495e" stroke-width="2"/>
+  <line x1="60" y1="60" x2="60" y2="340" stroke="#34495e" stroke-width="2"/>
+  <text x="20" y="200.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#34495e" transform="rotate(-90, 20, 200.0)">Время (мс)</text><text x="50" y="345.0" text-anchor="end" font-family="Arial, sans-serif" font-size="12" fill="#7f8c8d">0</text><line x1="55" y1="340.0" x2="60" y2="340.0" stroke="#95a5a6" stroke-width="1"/><text x="50" y="275.0" text-anchor="end" font-family="Arial, sans-serif" font-size="12" fill="#7f8c8d">1549</text><line x1="55" y1="270.0" x2="60" y2="270.0" stroke="#95a5a6" stroke-width="1"/><text x="50" y="205.0" text-anchor="end" font-family="Arial, sans-serif" font-size="12" fill="#7f8c8d">3097</text><line x1="55" y1="200.0" x2="60" y2="200.0" stroke="#95a5a6" stroke-width="1"/><text x="50" y="135.0" text-anchor="end" font-family="Arial, sans-serif" font-size="12" fill="#7f8c8d">4646</text><line x1="55" y1="130.0" x2="60" y2="130.0" stroke="#95a5a6" stroke-width="1"/><text x="50" y="65.0" text-anchor="end" font-family="Arial, sans-serif" font-size="12" fill="#7f8c8d">6195</text><line x1="55" y1="60.0" x2="60" y2="60.0" stroke="#95a5a6" stroke-width="1"/>
+  <circle cx="60.0" cy="227.2698290225985" r="5" fill="#e74c3c" stroke="#fff" stroke-width="2"/>
+  <text x="60.0" y="212.2698290225985" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#e74c3c">2494.1</text>
+  <text x="60.0" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#7f8c8d">avg</text>
+  <circle cx="286.66666666666663" cy="197.87874763477774" r="5" fill="#e74c3c" stroke="#fff" stroke-width="2"/>
+  <text x="286.66666666666663" y="182.87874763477774" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#e74c3c">3144.4</text>
+  <text x="286.66666666666663" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#7f8c8d">med</text>
+  <circle cx="513.3333333333333" cy="126.551846404668" r="5" fill="#e74c3c" stroke="#fff" stroke-width="2"/>
+  <text x="513.3333333333333" y="111.551846404668" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#e74c3c">4722.5</text>
+  <text x="513.3333333333333" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#7f8c8d">p(90)</text>
+  <circle cx="740.0" cy="106.66666666666666" r="5" fill="#e74c3c" stroke="#fff" stroke-width="2"/>
+  <text x="740.0" y="91.66666666666666" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#e74c3c">5162.5</text>
+  <text x="740.0" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#7f8c8d">p(95)</text>
+  <path d="M 60.0,227.2698290225985 L 286.66666666666663,197.87874763477774 L 513.3333333333333,126.551846404668 L 740.0,106.66666666666666" stroke="#e74c3c" stroke-width="3" fill="none"/>
+</svg>

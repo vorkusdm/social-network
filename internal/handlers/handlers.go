@@ -8,6 +8,7 @@ import (
     "fmt"
     "net/http"
     "time"
+    "strconv"
 
     "golang.org/x/crypto/bcrypt"
     "social_network/internal/db"
@@ -144,4 +145,55 @@ func (h *Handler) GetUser(w http.ResponseWriter, r *http.Request) {
     }
 
     json.NewEncoder(w).Encode(user)
+}
+
+// --- Поиск анкет по префиксу имени и фамилии ---
+func (h *Handler) SearchUsers(w http.ResponseWriter, r *http.Request) {
+    firstNamePrefix := r.URL.Query().Get("first_name")
+    lastNamePrefix := r.URL.Query().Get("last_name")
+    limitStr := r.URL.Query().Get("limit")
+
+    if firstNamePrefix == "" || lastNamePrefix == "" {
+	http.Error(w, "first_name and last_name are required", http.StatusBadRequest)
+	return
+    }
+
+    limit := 50
+    if limitStr != "" {
+	if parsedLimit, err := strconv.Atoi(limitStr); err == nil && parsedLimit > 0 {
+	    limit = parsedLimit
+	}
+    }
+
+    // сначала находим id через индекс, потом подтягиваем данные
+    query := `SELECT u.id, u.login, u.first_name, u.last_name, u.birth_date, u.gender, u.interests, u.city 
+              FROM (
+                  SELECT id FROM users 
+                  WHERE first_name LIKE $1 AND last_name LIKE $2 
+                  ORDER BY id 
+                  LIMIT $3
+              ) AS subq
+              JOIN users u ON u.id = subq.id
+              ORDER BY u.id`
+
+    rows, err := db.Pool.Query(r.Context(), query, firstNamePrefix+"%", lastNamePrefix+"%", limit)
+    if err != nil {
+	http.Error(w, "Database error", http.StatusInternalServerError)
+	return
+    }
+    defer rows.Close()
+
+    var users []models.User
+    for rows.Next() {
+	var u models.User
+	err := rows.Scan(&u.ID, &u.Login, &u.FirstName, &u.LastName, &u.BirthDate, &u.Gender, &u.Interests, &u.City)
+	if err != nil {
+	    http.Error(w, "Scan error", http.StatusInternalServerError)
+	    return
+	}
+	users = append(users, u)
+    }
+
+    w.Header().Set("Content-Type", "application/json")
+    json.NewEncoder(w).Encode(users)
 }
